@@ -39,8 +39,8 @@ const Page = () => {
         <label>Sort Order: </label>
         <select value={sortType} onChange={handleSortChange}>
           {toggleOptions.map((option) => (
-            <option value={option.value}>
-              {option.label} key={option.value}
+            <option key={option.value} value={option.value}>
+              {option.label} 
             </option>
           ))}
         </select>
