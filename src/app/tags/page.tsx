@@ -35,7 +35,7 @@ const Page = () => {
 
   return (
     <div className="flex justify-self-center gap-2 cursor-pointer max-w-2xl flex-wrap">
-    <div>
+    
         <label>Sort Order: </label>
         <select value={sortType} onChange={handleSortChange}>
           {toggleOptions.map((option) => (
@@ -51,7 +51,7 @@ const Page = () => {
           </div>
         </Link>
       ))}
-      </div>
+      
      
       
     </div>
