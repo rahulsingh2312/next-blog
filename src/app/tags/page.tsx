@@ -35,15 +35,7 @@ const Page = () => {
 
   return (
     <div className="flex justify-self-center gap-2 cursor-pointer max-w-2xl flex-wrap">
-     
-     {sortedList.map(([tagName, count], i) => (
-        <Link key={i} href={`tags/${tagName}`}>
-          <div className="border border-blue-400 px-2 rounded-lg hover:bg-blue-400">
-            {tagName + " " + count}
-          </div>
-        </Link>
-      ))}
- <div>
+    <div>
         <label>Sort Order: </label>
         <select value={sortType} onChange={handleSortChange}>
           {toggleOptions.map((option) => (
@@ -52,6 +44,13 @@ const Page = () => {
             </option>
           ))}
         </select>
+        {sortedList.map(([tagName, count], i) => (
+        <Link key={i} href={`tags/${tagName}`}>
+          <div className="border border-blue-400 px-2 rounded-lg hover:bg-blue-400">
+            {tagName + " " + count}
+          </div>
+        </Link>
+      ))}
       </div>
      
       
